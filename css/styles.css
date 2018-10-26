@@ -27,6 +27,7 @@ body {
 .wrapper--left,
 .wrapper--right {
   width: 50%;
+  padding: 20px;
   /*  temporary*/
   border: 1px solid lightblue;
 }
@@ -49,4 +50,56 @@ transform: translateX(-50%);
 ul {
 list-style: none;
   
+}
+
+
+h2.additional--info {
+  
+  display: flex;
+	flex-basis: 100%;
+align-items:center;
+  vertical-align:top;
+	margin: 8px 0px;
+  margin-left: 80px;
+  position: relative;
+  
+/*  display: inline-block;
+  width: 100%;
+
+  box-sizing: border-box;
+  position: relative;
+vertical-align: middle;
+
+overflow: hidden;
+  padding-left: 80px;
+  padding-right: 10px;
+*/
+}
+
+h2.additional--info::before {
+
+background-image: url("../img/profileicon.png");
+background-size: 50%;
+background-repeat: no-repeat;
+content: "";
+width: 148px;
+height: 143px;
+  margin: 0px 0px;
+ position: absolute;
+  left: -80px;
+  margin-right: auto;
+  transform: translateY(25%)
+  
+}
+
+h2.additional--info::after {
+
+  content: "";
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.35);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+    
 }
