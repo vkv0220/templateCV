@@ -1,0 +1,52 @@
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper--container {
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px;
+  
+/*  temporary*/
+  border: 1px solid blue;
+}
+
+.wrapper--left,
+.wrapper--right {
+  width: 50%;
+  /*  temporary*/
+  border: 1px solid lightblue;
+}
+
+.cv--photo {
+margin-top: 90px;
+position: relative;
+left: 50%;
+width: 50%;
+height: 50%;
+transform: translateX(-50%);
+}
+
+.personal--data,
+.personal--data__surname,
+.occupation {
+  text-align: center;
+}
+
+ul {
+list-style: none;
+  
+}
