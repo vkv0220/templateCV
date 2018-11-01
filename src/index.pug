@@ -1,3 +1,9 @@
+include ./pug/personal_data.pug
+include ./pug/profile.pug
+include ./pug/contact.pug
+include ./pug/skills.pug
+include ./pug/education.pug
+
 doctype html
 html(lang='en')
   head
@@ -8,79 +14,12 @@ html(lang='en')
     h1.visually-hidden CV sample
     .wrapper
       .col-left
-        section.personalData
-            img.personalData__photo(src='./img/Photo.png', alt='CV Photo', width='359')
-            h2.personalData__name name here
-            p.personalData__surname surname
-            p.personalData__occupation graphic designer
-        section.profile
-          .section__wrapper
-            img.section__ico.profile__ico(src='./img/PROFILEICON.png', alt='CV Photo', width='116')
-            .sectionHeader__wrapper
-              h2.section__title Profile
-          p
-            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu 
-            strong
-              | pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
-        section.contact
-          .section__wrapper
-            img.section__ico.contact__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
-            .sectionHeader__wrapper
-              h2.section__title contact
-          ul.contact__list
-            li
-              h3 address
-              |  Main Sreet, City
-            li
-              h3 e-mail
-              |  contact@domain.com
-            li
-              h3 phone
-              |  555-555-555
-            li
-              h3 website
-              |  www.yourweb.com
-        section.skills
-          .section__wrapper
-            img.section__ico.skills__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
-            .sectionHeader__wrapper
-              h2.section__title skills
-          ul.skills__list
-            li creative
-            li teamwork
-            li innovate
-            li communication
+        +personal_data('name here', 'surname', 'graphic designer')
+        +profile()
+        +contact('Main Sreet, City','contact@domain.com','555-555-555', 'www.yourweb.com')
+        +skills()
       .col-right
-        section.education
-          .section__wrapper
-            img.section__ico.education__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
-            .sectionHeader__wrapper
-              h2.section__title education
-          ul.education__list
-            li
-              h3 master degree
-              p // Feb2011 - Jun 2014
-              h4 university name
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
-            li
-              h3 master degree
-              p // Feb2011 - Jun 2014
-              h4 university name
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
-            li
-              h3 master degree
-              p // Feb2011 - Jun 2014
-              h4 university name
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
-            li
-              h3 master degree
-              p // Feb2011 - Jun 2014
-              h4 university name
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
+        +education()
         section.expierence
           .section__wrapper
             img.section__ico.expierence__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
@@ -91,19 +30,19 @@ html(lang='en')
               h3 company name
               p // Feb2011 - Jun 2014
               h4 you job here
-              p
+              p.details
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
             li
               h3 company name
               p // Feb2011 - Jun 2014
               h4 you job here
-              p
+              p.details
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
             li
               h3 company name
               p // Feb2011 - Jun 2014
               h4 you job here
-              p
+              p.details
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
         section.software
           .section__wrapper

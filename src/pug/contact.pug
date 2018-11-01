@@ -1,0 +1,19 @@
+mixin contact(address, email, phone, website)  
+  section.contact
+    .section__wrapper
+      img.section__ico.contact__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
+      .sectionHeader__wrapper
+        h2.section__title contact
+    ul.contact__list
+      li
+        h3 address
+        p=address
+      li
+        h3 e-mail
+        p=email
+      li
+        h3 phone
+        p=phone
+      li
+        h3 website
+        p=website
