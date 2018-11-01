@@ -1,0 +1,69 @@
+@import '../css/fonts.css';
+
+$color = #006cb4
+
+* 
+    margin 0
+    padding 0
+
+body 
+    max-width 1920px
+    font-family "MyriadPro", Arial, sans-serif;
+
+.visually-hidden
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+.wrapper
+    display: flex;
+    padding: 20px
+
+.col-left
+    width: 40%
+    padding: 20px
+.col-right
+    width: 60%
+    padding: 20px
+
+.personalData__photo
+  margin-top: 107px;
+  position: relative;
+  left: 53%;
+  width: 56%;
+  height: 52%;
+  transform: translateX(-52%);
+
+.section__wrapper
+    width: 100%
+    display: flex
+    align-items: center;
+
+.section__ico
+  position: relative;
+  max-width: 18%;
+  height: 18%;
+
+.sectionHeader__wrapper
+    width: 100%
+
+.section__title
+    display: flex;
+    align-items: center;
+    font-size: 63.72px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color;
+    padding-left: 10px;
+    
+    &:after
+        flex-grow: 1;
+        content: " ";
+        padding: 5px;
+        margin: 20px 5px 15px 10px;
+        background: $color;
