@@ -3,6 +3,8 @@ include ./pug/profile.pug
 include ./pug/contact.pug
 include ./pug/skills.pug
 include ./pug/education.pug
+include ./pug/expierence.pug
+include ./pug/software.pug
 
 doctype html
 html(lang='en')
@@ -16,51 +18,9 @@ html(lang='en')
       .col-left
         +personal_data('name here', 'surname', 'graphic designer')
         +profile()
-        +contact('Main Sreet, City','contact@domain.com','555-555-555', 'www.yourweb.com')
+        +contact('Main Street, City.','contact@domain.com','555-555-555', 'www.yourweb.com')
         +skills()
       .col-right
         +education()
-        section.expierence
-          .section__wrapper
-            img.section__ico.expierence__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
-            .sectionHeader__wrapper
-              h2.section__title expierence
-          ul.expierence__list
-            li
-              h3 company name
-              p // Feb2011 - Jun 2014
-              h4 you job here
-              p.details
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
-            li
-              h3 company name
-              p // Feb2011 - Jun 2014
-              h4 you job here
-              p.details
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
-            li
-              h3 company name
-              p // Feb2011 - Jun 2014
-              h4 you job here
-              p.details
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius ratione, qui laboriosam voluptatum unde eaque sapiente, temporibus mollitia! Cum libero corporis quibusdam tempore dolorem, nulla sint quod ipsum excepturi.
-        section.software
-          .section__wrapper
-            img.section__ico.software__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
-            .sectionHeader__wrapper
-              h2.section__title software
-          ul.software__list
-            li photoshop
-            li illustrator
-            li indesign
-          ul.software__list
-            li dreamviewer
-            li after effects
-            li html & css3
-
-    //-     svg(width='150', height='140')
-    //-       rect(r='230', width='300', height='100%', fill='white')
-    //-       circle(cx='70', cy='70', r='70', stroke='#3D6CB0', stroke-width='1', fill='white')
-    //-       circle(cx='70', cy='70', r='65', fill='#3D6CB0')
-    //- h1.test fgjhdfjhfgjhsdfg
-    //- script(src='./dist/main.js')
+        +expierence()
+        +software()

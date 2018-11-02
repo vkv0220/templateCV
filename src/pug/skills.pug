@@ -1,12 +1,20 @@
 mixin skill(name, points)
   li=name
-  div(class='skills_points_'+ points)
+  div.skills__level
+    -var n = 0;
+    while n < points
+     span.pointed= n++
+    -var e = 0
+    -var m = 12-points
+    while e < m
+     span.unpointed= e++
+//- div(class='skills_points_'+ points)
 
 mixin skills()
   section.skills
     .section__wrapper
       img.section__ico.skills__ico(src='./img/skillsicon.png', alt='CV Photo', width='116')
-      .sectionHeader__wrapper
+      .section__headerWrapper
         h2.section__title skills
     ul.skills__list
       +skill('creative', 9)
