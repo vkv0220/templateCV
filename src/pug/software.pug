@@ -1,10 +1,7 @@
 mixin softwareLevel(name, points)
  -var pointsleft= 100 - points;
   li= name
-  .software__column
-   .software__columnLevel(style='background: linear-gradient(to right, #006cb4 ' + points + '%, #e7e7e7 ' + pointsleft + '%)')
-  //- div(class='skills_points_'+ points)
-  //- (style="background: linear-gradient(to right, #3d6cb0 50%, #e6e6e6 50%)")
+  .software__columnLevel(style='background: linear-gradient(to right, #006cb4 ' + points + '%, #e7e7e7 ' + pointsleft + '%)')
 
 mixin software()
   section.software
