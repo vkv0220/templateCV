@@ -1,3 +1,11 @@
+mixin softwareLevel(name, points)
+ -var pointsleft= 100 - points;
+  li= name
+  .software__column
+   .software__columnLevel(style='background: linear-gradient(to right, #006cb4 ' + points + '%, #e7e7e7 ' + pointsleft + '%)')
+  //- div(class='skills_points_'+ points)
+  //- (style="background: linear-gradient(to right, #3d6cb0 50%, #e6e6e6 50%)")
+
 mixin software()
   section.software
           .section__wrapper
@@ -6,10 +14,10 @@ mixin software()
               h2.section__title software
           .software__innerWrapper
               ul.software__list
-                li photoshop
-                li illustrator
-                li indesign
+                +softwareLevel('photoshop', 90)
+                +softwareLevel('illustrator', 70)
+                +softwareLevel('indesign', 60)
               ul.software__list
-                li dreamviewer
-                li after effects
-                li html & css3
+                +softwareLevel('dreamweaver', 80)
+                +softwareLevel('after effects', 60)
+                +softwareLevel('html & css3', 90)
