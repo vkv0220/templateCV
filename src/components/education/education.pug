@@ -1,9 +1,7 @@
+include ../sharred/sectionHeader.pug
 mixin education()
   section.education
-    .section__wrapper
-      img.section__ico.education__ico(src='./img/educationicon.png', alt='CV Photo', width='116')
-      .section__headerWrapper
-        h2.section__title education
+    +sectionHeader('education', './img/educationicon.png')
     ul.education__list
       li
         h3.education__header master degree

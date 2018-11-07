@@ -1,9 +1,8 @@
+include ../sharred/sectionHeader.pug
 mixin contact(address, email, phone, website)  
   section.contact
-    .section__wrapper
-      img.section__ico.contact__ico(src='./img/PhoneIcon.png', alt='CV Photo', width='116')
-      .section__headerWrapper
-        h2.section__title contact
+    +sectionHeader('contact', './img/PhoneIcon.png')
+    
     ul.contact__list
       li
         h3.contact__header address

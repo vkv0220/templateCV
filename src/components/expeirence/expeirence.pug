@@ -1,9 +1,7 @@
+include ../sharred/sectionHeader.pug
 mixin expeirence()  
   section.expeirence
-          .section__wrapper
-            img.section__ico.expeirence__ico(src='./img/expeirenceicon.png', alt='CV Photo', width='116')
-            .section__headerWrapper
-              h2.section__title experience
+          +sectionHeader('experience', './img/expeirenceicon.png')
           ul.expeirence__list
             li
               h3.expeirence__company company name

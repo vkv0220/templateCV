@@ -1,3 +1,4 @@
+include ../sharred/sectionHeader.pug
 mixin skill(name, points)
   li=name
   div.skills__level
@@ -11,10 +12,7 @@ mixin skill(name, points)
 
 mixin skills()
   section.skills
-    .section__wrapper
-      img.section__ico.skills__ico(src='./img/skillsicon.png', alt='CV Photo', width='116')
-      .section__headerWrapper
-        h2.section__title skills
+    +sectionHeader('skills', './img/skillsicon.png')
     ul.skills__list
       +skill('creative', 9)
       +skill('teamwork', 8)

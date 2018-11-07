@@ -1,9 +1,12 @@
+include ../sharred/sectionHeader.pug
 mixin profile()
   section.profile
-    .section__wrapper
-      img.section__ico.profile__ico(src='./img/PROFILEICON.png', alt='CV Photo', width='116')
-      .section__headerWrapper
-        h2.section__title Profile
+    +sectionHeader('profile', './img/PROFILEICON.png')
+    //- .section__wrapper
+    //-   img.section__ico.profile__ico(src='./img/PROFILEICON.png', alt='Profile icon', width='116')
+    //-   .section__headerWrapper
+    //-     h2.section__title Profile
+
     p.profile__details
       | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu 
       strong

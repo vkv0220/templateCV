@@ -1,3 +1,4 @@
+include ../sharred/sectionHeader.pug
 mixin softwareLevel(name, points)
  -var pointsleft= 100 - points;
   li= name
@@ -5,10 +6,7 @@ mixin softwareLevel(name, points)
 
 mixin software()
   section.software
-          .section__wrapper
-            img.section__ico.software__ico(src='./img/SOFTWAREICON.png', alt='CV Photo', width='116')
-            .section__headerWrapper
-              h2.section__title software
+          +sectionHeader('software', './img/SOFTWAREICON.png')
           .software__innerWrapper
               ul.software__list
                 +softwareLevel('photoshop', 90)
