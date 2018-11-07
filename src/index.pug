@@ -1,10 +1,10 @@
-include ./pug/personal_data.pug
-include ./pug/profile.pug
-include ./pug/contact.pug
-include ./pug/skills.pug
-include ./pug/education.pug
-include ./pug/expierence.pug
-include ./pug/software.pug
+include ./components/personal_data/personal_data.pug
+include ./components/profile/profile.pug
+include ./components/contact/contact.pug
+include ./components/skills/skills.pug
+include ./components/education/education.pug
+include ./components/expeirence/expeirence.pug
+include ./components/software/software.pug
 
 doctype html
 html(lang='en')
@@ -22,5 +22,5 @@ html(lang='en')
         +skills()
       .col-right
         +education()
-        +expierence()
+        +expeirence()
         +software()

@@ -1,0 +1,47 @@
+@import './fonts.css';
+@import '../expeirence/experience.styl';
+@import '../personal_data/personal_data.styl';
+@import '../education/education.styl';
+@import '../contact/contact.styl';
+@import '../software/software.styl';
+@import '../sharred/sharred.styl';
+@import '../profile/profile.styl';
+@import '../skills/skills.styl';
+@import '../layout/media.styl';
+
+text-size(a,b)
+    font-size a
+    font-weight b
+$color = #006cb4
+html 
+    font-size 23.9px
+
+* 
+    margin 0
+    padding 0
+
+body 
+    max-width 1920px
+    font-family "MyriadPro", Arial, sans-serif;
+
+.wrapper
+    display flex
+    padding-left 4%
+    padding-right 4%
+
+.col-left
+    width: 40%
+    padding-left: 0.5%;
+    margin-right: 6.5%;
+.col-right
+    width: 60%
+
+components-sharred()
+components-personal_data()
+components-profile()
+component-contact()
+component-skills()  
+component-education()
+component-expeirence()
+component-software()
+component-media()

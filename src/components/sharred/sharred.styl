@@ -1,0 +1,41 @@
+components-sharred()
+ .visually-hidden
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+ .section
+    &__wrapper
+     width: 100%
+     display: flex
+     align-items: center;
+
+    &__ico
+     position: relative;
+     width: 4.8rem;
+     height: 4.8rem;
+
+    &__headerWrapper
+     width: 100%
+
+    &__title
+      display: flex;
+      align-items: center;
+      text-size(2.71rem,bold)
+      // font-size: 63.72px;
+      // font-weight: bold;
+      text-transform: uppercase;
+      color: $color;
+      padding-left: 0.6rem;
+    
+      &:after
+        flex-grow: 1;
+        content: " ";
+        padding: 0.18rem;
+        margin: 20px 5px 15px 10px;
+        background: $color;

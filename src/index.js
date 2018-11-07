@@ -5,4 +5,4 @@
 // document.querySelector('body').classList.add('with-styles');
 
 //import './css/styles.less';
-import './css/styles.styl';
+import './components/layout/styles.styl';
