@@ -1,5 +1,5 @@
 mixin sectionHeader(name, imgSource)
  .sectionHeader__wrapper
-      img(class= 'sectionHeader__ico')(class= name+'__ico')(src= imgSource, alt= name + 'icon', width='116')
+      img.sectionHeader__ico(class= name+'__ico', src= imgSource, alt= name + 'icon', width='116')
       .sectionHeader__headerWrapper
         h2.sectionHeader__title= name
